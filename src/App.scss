@@ -1,0 +1,37 @@
+@import 'reset.css';
+@import 'line-awesome/dist/line-awesome/css/line-awesome.min.css';
+@import './ui-style/basic-elements.scss';
+
+.app {
+  background-color: #F3F3F5;
+  padding: 2rem;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+}
+.app toolbar {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+
+  button{
+    align-self: center;
+  }
+}
+
+
+.list-member{
+  background-color: #FFFFFF
+}
+
+
+
+
+
+button.fancy-button{
+  background-color:#0EC9AE;
+  color:#83F0E2;
+  border-radius:0.5rem;
+  padding:0.5rem 2em;
+  border:none
+}

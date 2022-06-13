@@ -1,0 +1,45 @@
+a {
+  text-transform: lowercase;
+}
+button{
+  box-sizing: border-box;
+  height: 3rem;
+  padding: 10px 16px;
+  transition: color 200ms ease;
+  border: none;
+  border-radius: .5em;
+  outline: none;
+  background: #ea4c89;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  appearance: none;
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 2rem;
+
+  &:hover {
+    cursor: pointer;
+    color: purple;
+  }
+}
+
+form{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 30em;
+  row-gap: .1em;
+
+  &>label{
+    width: 50%;
+    text-transform: capitalize;
+  }
+  input{
+    line-height: 1.5;
+  }
+}

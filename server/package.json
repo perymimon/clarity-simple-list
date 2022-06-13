@@ -1,0 +1,28 @@
+{
+  "name": "clarity-server",
+  "version": "1.0.0-alpha.0",
+  "description": "home test",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon  --inspect index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuvalyn/pery.git"
+  },
+  "keywords": [
+    "Clarity",
+    "home-test"
+  ],
+  "author": "perymimon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/y cuvalyn/pery/issues"
+  },
+  "homepage": "https://github.com/yuvalyn/pery#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
