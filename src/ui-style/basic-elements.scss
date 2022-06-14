@@ -1,7 +1,8 @@
 a {
   text-transform: lowercase;
 }
-button{
+
+button {
   box-sizing: border-box;
   height: 3rem;
   padding: 10px 16px;
@@ -24,8 +25,8 @@ button{
   }
 }
 
-form{
-  display: flex;
+form {
+  display: grid;
   flex-flow: row wrap;
   justify-content: space-between;
   background-color: #fff;
@@ -35,11 +36,17 @@ form{
   width: 30em;
   row-gap: .1em;
 
-  &>label{
-    width: 50%;
+  & > * {
+   box-sizing: border-box;
+  }
+
+  & > label {
+    grid-column: 1/ span 1;
     text-transform: capitalize;
   }
-  input{
+
+  & > input {
+    grid-column: 2/ span 4;
     line-height: 1.5;
   }
 }

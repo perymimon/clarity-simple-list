@@ -14,10 +14,16 @@ export default forwardRef(function Dialog(props, ref) {
         if(ret !== false) ref.current.close();
     }
 
+    function handleClickClose(e){
+        const ret = onClickClose?.(e);
+        if(ret !== false) ref.current.close();
+    }
 
     return (
         <dialog ref={ref}>
-            <i className="la la-close"></i>
+            <button onClick={handleClickClose}>
+                <i className="la la-close" ></i>
+            </button>
             <main>
                 {children}
             </main>

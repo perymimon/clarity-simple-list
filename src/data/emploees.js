@@ -33,7 +33,7 @@ export function useEmployees() {
     }
     function setEmployee(employee) {
         if (employee.id) {
-            const index = employees.findIndex(employee => employee.id === employee.id);
+            const index = employees.findIndex(e => e.id === employee.id);
             employees[index] = employee;
         } else{
             employee.id = `temp-`+employees.length + 1;

@@ -10,11 +10,12 @@ function App() {
     const [employees, deleteEmployee, setEmployee] = useEmployees();
     const dialog = useRef();
     const form = useRef();
+
     const [employee, setCurrentEmployee] = useState(null);
 
     function handleClickEdit(employee) {
         setCurrentEmployee({...employee});
-        dialog.current.showModal(employee);
+        dialog.current.showModal();
     }
 
     function handleClickDialogSave() {
@@ -24,15 +25,17 @@ function App() {
 
     async function handleClickAddEmployee() {
         // demo purpose only
+        dialog.current.showModal();
         const result = await fetch('https://randomuser.me/api?inc=name,picture,dob,email,login').then(res => res.json())
         const employee = result.results[0];
         const {name: {first,last}, picture:{large}, email,login:{uuid}, dob:{age}} = employee;
         setCurrentEmployee({
             id: uuid, name: `${first}`, avatar: large, email, age,
-            role: 'chef', dealMode: 'full time', salary: '12k NIS', status: 'test period', statusPeriod: '2 months'
+            role: 'chef', dealMode: 'full time', salary: '12k NIS',
+            status: 'test period', statusPeriod: '2 months'
         });
 
-        dialog.current.showModal();
+
     }
 
     return (

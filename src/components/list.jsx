@@ -1,7 +1,9 @@
 import './list.scss'
+import {useAnimeManager} from '@perymimon/react-anime-manager'
 
 export default function List(props) {
-    const {children, data, component, sortedKeys,...otherProps} = props;
+    const {children, data, component, sortedKeys, ...otherProps} = props;
+    const dataState = useAnimeManager(data, {key: 'id'});
 
     return (
         <>
@@ -9,9 +11,17 @@ export default function List(props) {
 
             </toolbar>
             <ul className="list">
-                {data.map((datum, index) => {
-                    return <li key={datum.id || index} className="list-member">
-                        {component({...otherProps,...datum})}
+                {dataState.map(({item: datum, phase, done, ref, meta_dx, meta_dy}, index) => {
+                    const style = {
+                        '--dx': meta_dx,
+                        '--dy': meta_dy
+                    }
+                    return <li key={datum.id || index} phase={phase}
+                               rer={ref}
+                               style={style}
+                               onAnimationEnd={done}
+                               className="list-member">
+                        {component({...otherProps, ...datum})}
                     </li>
                 })}
             </ul>
