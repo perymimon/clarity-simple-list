@@ -25,8 +25,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `Dmployee` data model
-basically is collection of random data to show in the list
+### `Employee` data model
+
+Basically is collection of random picked data to show in employees list
 
 ```javascript
 employee = {
